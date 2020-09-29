@@ -1,4 +1,5 @@
 # imagination
+The two files SongCache.java and SongCacheImpl.java can be found at **imagination/src/main/java/com/zhu**
 
 As the program could be run by multiple threads, so I have chosen ConcurrentHashMap to store song names and times played. Because it's a thread-safe data structure so it would not get into dead cycle when augmenting its size. 
 
