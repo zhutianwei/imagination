@@ -9,14 +9,20 @@ public class SongCacheImpl implements SongCache {
         
     /** 
      * Record number of plays for a song. 
+     * O(1) time complexity
      */ 
     @Override
     public void recordSongPlays(String songId, int numPlays) {
+        if (numPlays < 0) {
+            throw new IllegalArgumentException("The number of play must be positive.");
+        }
+
         songs.put(songId, songs.getOrDefault(songId, 0) + numPlays);
     }
 
     /**
      * Fetch the number of plays for a song. 
+     * O(1) time complexity
      * @return the number of plays, or -1 if the song ID is unknown.
      */
     @Override
@@ -28,10 +34,12 @@ public class SongCacheImpl implements SongCache {
         }
     }
 
-    @Override
     /**
      * Return the top N songs played, in descending order of number of plays.
+     * O(Nlogk) time complexity
+     * O(k) space complexity
      */
+    @Override
     public List<String> getTopNSongsPlayed(int n) {
         if (n <= 0) {
             return null;
@@ -53,9 +61,5 @@ public class SongCacheImpl implements SongCache {
         }
 
         return new ArrayList<>(result);
-
     }
-
-
-
 }
