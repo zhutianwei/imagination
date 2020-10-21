@@ -1,6 +1,6 @@
 package com.zhu;
 
-// import com.zhu.Helper;
+import com.zhu.*;
 import java.util.*;
 import java.util.concurrent.*;
 import com.zhu.SongCache;
@@ -14,23 +14,13 @@ import org.apache.commons.lang3.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        SongCache cache = new SongCacheImpl();
-        for (int i = 0; i < 10; i++) {
-            cache.recordSongPlays("ID-1", 3);
-            cache.recordSongPlays("ID-1", 1);
-            cache.recordSongPlays("ID-2", 2);
-            cache.recordSongPlays("ID-3", 5);
+        int a = 1;
+        if (0 < a && a < 1) {
+
         }
-        
-        System.out.println(cache.getPlaysForSong("ID-1"));
-        System.out.println(cache.getPlaysForSong("ID-9"));
-        System.out.println(cache.getTopNSongsPlayed(2));
-        System.out.println(cache.getTopNSongsPlayed(0));
+    }  
 
-
-    }    
-
-    public void test11() {
+    public static void test11() {
         String a = "aabbc";
         String[] dictionary = new String[4];
         dictionary[0] = "aacdd";
