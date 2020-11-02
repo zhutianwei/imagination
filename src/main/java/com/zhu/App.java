@@ -3,8 +3,7 @@ package com.zhu;
 import com.zhu.*;
 import java.util.*;
 import java.util.concurrent.*;
-import com.zhu.SongCache;
-import com.zhu.SongCacheImpl;
+
 
 import org.apache.commons.lang3.*;
 // import java.util.Scanner;
@@ -13,11 +12,14 @@ import org.apache.commons.lang3.*;
 // import com.google.common.base;
 
 public class App {
-    public static void main(String[] args) throws Exception {
-        int a = 1;
-        if (0 < a && a < 1) {
+    public static void main(String[] args) {
+        List<String> letters = new ArrayList(Arrays.asList("D", "B", "A", "C", "F", "G"));
+    Predicate<String> p1 = s -> s.compareTo ("C") > O;
+    Predicate<String> p2 = s -> s.equals ("B");
+    letters.removeIf(p1.negate().or(s2));
+    letters.sort ( (s1, s2) -> s1.compareTo (s2));
+    System.out.println(letters);
 
-        }
     }  
 
     public static void test11() {
